@@ -29,16 +29,16 @@ git submodule update --init --recursive --force
 apt install -y gcc-arm-none-eabi libnewlib-arm-none-eabi openocd
 ```
 
-在ubuntu20等早起版本，直接安装的gcc版本过低，需要下载配置特定版本 [`arm-gnu-toolchain`](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads)
+在ubuntu20之前的默认安装的gcc版本过低，下载特定版本[`arm-gnu-toolchain`](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads)
 
 ```sh
-wget https://developer.arm.com/-/media/Files/downloads/gnu/13.2.rel1/binrel/arm-gnu-toolchain-13.2.rel1-x86_64-arm-none-eabi.tar.xz
+wget https://developer.arm.com/-/media/Files/downloads/gnu/13.3.rel1/binrel/arm-gnu-toolchain-13.3.rel1-x86_64-arm-none-eabi.tar.xz
 sudo mkdir -p /opt/gcc-arm/
-sudo tar xvf arm-gnu-toolchain-13.2.rel1-x86_64-arm-none-eabi.tar.xz -C /opt/gcc-arm/
+sudo tar xvf arm-gnu-toolchain-13.3.rel1-x86_64-arm-none-eabi.tar.xz -C /opt/gcc-arm/
 vim ~/.bashrc
-PATH=$PATH:/opt/gcc-arm/arm-gnu-toolchain-13.2.rel1-x86_64-arm-none-eabi/bin
+PATH=$PATH:/opt/gcc-arm/arm-gnu-toolchain-13.3.rel1-x86_64-arm-none-eabi/bin
 ```
-
+* 13.3.rel1 (July 4, 2024)
 * [Arm GNU Toolchain deprecated](https://developer.arm.com/downloads/-/gnu-rm)
 
 安装工具 [`rustup`](https://rustup.rs/):
