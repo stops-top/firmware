@@ -41,11 +41,11 @@ PATH=$PATH:/opt/gcc-arm/arm-gnu-toolchain-13.3.rel1-x86_64-arm-none-eabi/bin
 * 13.3.rel1 (July 4, 2024)
 * [Arm GNU Toolchain deprecated](https://developer.arm.com/downloads/-/gnu-rm)
 
-安装工具 [`rustup`](https://rustup.rs/):
+安装rust工具 [`rustup`](https://rustup.rs/):
 
 ```sh
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
+sudo apt install rustup
 rustup target add thumbv7em-none-eabihf  # for TT
 rustup target add thumbv7m-none-eabi     # for T1
 
